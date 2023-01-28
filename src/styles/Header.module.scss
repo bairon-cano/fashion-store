@@ -1,0 +1,110 @@
+@import "vars";
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0px 1px 10px 1px rgba($color: $--black, $alpha: 0.5);
+  position: fixed;
+  top: 0;
+  background: white;
+  width: calc(100% - 50px);
+  z-index: 30;
+}
+.menu {
+  cursor: pointer;
+}
+
+.iconContainer {
+  display: none;
+  height: 30px;
+  width: 30px;
+  align-self: center;
+}
+
+.nav-logo {
+  width: 100px;
+  align-self: center;
+}
+.navbar-left ul,
+.navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbar-left {
+  display: flex;
+}
+.navbar-left ul {
+  margin-left: 12px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a {
+  text-decoration: none;
+  color: $--very-light-pink;
+  border: 1px solid $--white;
+  padding: 8px;
+  border-radius: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+  border: 1px solid $--hospital-green;
+  color: $--hospital-green;
+}
+.navbar-email {
+  color: $--very-light-pink;
+  font-size: $--sm;
+  margin-right: 12px;
+  font-weight: bold;
+}
+.navbar-login{
+  background-color: $--hospital-green;
+  border-radius: 8px;
+  border: none;
+  color: $--white;
+  margin-right: 12px;
+  font-size: $--md;
+  font-weight: bold;
+  padding: 7px 20px;
+  text-decoration: none;
+  transition-property: background-color, transform;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+.navbar-login:hover {
+  border: 1px solid $--hospital-green;
+  color: $--hospital-green;
+  background-color: $--white;
+}
+.navbar-shopping-cart {
+  position: relative;
+}
+.navbar-shopping-cart div {
+  width: 16px;
+  height: 16px;
+  background-color: $--hospital-green;
+  border-radius: 50%;
+  font-size: $--sm;
+  font-weight: bold;
+  color: $--white;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .iconContainer {
+    display: block;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+  .navbar-email {
+    display: none;
+  }
+}

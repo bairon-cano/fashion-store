@@ -1,0 +1,67 @@
+@import "vars";
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+a[href],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
+}
+
+.changeBg {
+  filter: blur(4px);
+  pointer-events: none;
+  -webkit-filter: blur(4px);
+}
+
+.primary-button {
+  background-color: $--hospital-green;
+  border-radius: 8px;
+  border: none;
+  color: $--white;
+  width: 100%;
+  cursor: pointer;
+  font-size: $--md;
+  font-weight: bold;
+  padding: 15px 0px;
+  text-align: center;
+  text-decoration: none;
+	transition-property: background-color, transform, outline;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+.primary-button:hover {
+  outline: 1px solid $--hospital-green;
+  color: $--hospital-green;
+  background-color: $--white;
+}
+
+.secondary-button {
+	background-color: $--white;
+	border-radius: 8px;
+	border: 1px solid $--hospital-green;
+	color: $--hospital-green;
+	width: 100%;
+	cursor: pointer;
+	font-size: $--md;
+	font-weight: bold;
+	transition-property: color,background-color,transform;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+}
+
+.secondary-button:hover {
+  background-color: $--hospital-green;
+  color: $--white;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+}
