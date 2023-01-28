@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <AppContext.Provider value={initialState}>
       <Layout>
         <Head>
-          <title>Shopping</title>
+          <title>Fashion Shop</title>
         </Head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-MTN5T9CR99" />
         <Script id="google-analytics" strategy="afterInteractive">

@@ -20,6 +20,7 @@ const hostnames = [
   'm.media-amazon.com',
   'images.tcdn.com.br',
   'cdn.myanimelist.net',
+  'www.nationalgeographic.com.es',
 ];
 
 const nextConfig = {
