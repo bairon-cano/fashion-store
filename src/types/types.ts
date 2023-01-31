@@ -2,6 +2,7 @@ export type StateType = {
   cart: any[],
   menuIsOpen: boolean,
   orderIsOpen: boolean,
+  listIsOpen: boolean,
   userExist: boolean | null,
   isLogged: boolean | null,
   filter: string,

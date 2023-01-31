@@ -32,7 +32,7 @@ const Login = () => {
   
 
   return (
-    <div className={`${styles.Login} ${state.orderIsOpen ? 'changeBg' : ''}`}>
+    <div className={styles.Login}>
       <div className={styles['Login-container']}>
         {messageError && <span className={styles['message-error']}>Unregistered user</span>}
         <Image src={logo} alt="logo" className={styles.logo} width={150} />

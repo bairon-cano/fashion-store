@@ -21,6 +21,7 @@ const hostnames = [
   'images.tcdn.com.br',
   'cdn.myanimelist.net',
   'www.nationalgeographic.com.es',
+  'loremflickr.com',
 ];
 
 const nextConfig = {
@@ -30,19 +31,12 @@ const nextConfig = {
       hostname,
     })),
   },
-  // env: {
-  //   customKey: 'customValue',
-  // },
-  // compress: true,
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/hola',
-  //       destination: '/hello',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
 };
 
-module.exports = nextConfig;
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  include: ['production'],
+  register: true,
+});
+
+module.exports = withPWA(nextConfig);

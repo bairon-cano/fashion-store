@@ -18,7 +18,7 @@ const Checkout = () => {
 
   return (
     <section>
-      <div className={`${styles.Checkout} ${state.orderIsOpen ? 'changeBg' : ''}`}>
+      <div className={styles.Checkout}>
         <div className={styles['Checkout-container']}>
           <h1 className={styles.title}>My order</h1>
           <div className={styles['Checkout-content']}>

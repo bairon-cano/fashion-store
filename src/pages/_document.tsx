@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="es">
       <Head>
         <meta charSet="utf-8" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="https://i.postimg.cc/jSSdWJJw/icon.png" />
       </Head>
       <body>

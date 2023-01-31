@@ -7,7 +7,7 @@ const Orders = () => {
   const { state }: any = useContext(AppContext);
 
   return (
-    <div className={`${styles.Orders} ${state.orderIsOpen ? 'changeBg' : ''}`}>
+    <div className={styles.Orders}>
       <div className={styles['Orders-container']}>
         <h1 className={styles.title}>My orders</h1>
         {state.cart.map((product: any) => (

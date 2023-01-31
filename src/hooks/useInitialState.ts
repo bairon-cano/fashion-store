@@ -6,6 +6,7 @@ export const initialState: StateType = {
   cart: [],
   orderIsOpen: false,
   menuIsOpen: false,
+  listIsOpen: false,
   userExist: null,
   isLogged: null,
   filter: '',
@@ -41,6 +42,13 @@ const useInitialState = () => {
     setState({
       ...state,
       menuIsOpen: !state.menuIsOpen,
+    });
+  };
+
+  const toogleList = () => {
+    setState({
+      ...state,
+      listIsOpen: !state.listIsOpen,
     });
   };
 
@@ -107,6 +115,7 @@ const useInitialState = () => {
     removeFromCart,
     toggleOrder,
     toggleMenu,
+    toogleList,
     changeFilter,
     changeProducts,
     login,

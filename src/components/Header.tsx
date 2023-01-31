@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import Menu from 'components/Menu';
 import menu from '@icons/icon_menu.svg';
+import closeMenu from '@icons/close.png';
 import logo from '@logos/logo_yard_sale.svg';
 import AppContext from 'context/AppContext';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
@@ -10,19 +11,36 @@ import MyOrder from 'containers/MyOrder';
 import styles from 'styles/Header.module.scss';
 
 const Header = () => {
-  const { state, toggleOrder, toggleMenu, changeFilter }: any = useContext(AppContext);
+  const { state, toggleOrder, toggleMenu, toogleList, changeFilter }: any = useContext(AppContext);
 
   return (
     <>
       <nav className={styles.Nav}>
         <div className={styles.iconContainer}>
-          <Image src={menu} alt="Mostrar menú de búsqueda" width={30} height={30} className={styles.menu} />
+          {!state?.listIsOpen ? 
+            <Image 
+              src={menu} 
+              alt="Mostrar menú" 
+              width={30} 
+              height={30} 
+              className={styles.menu} 
+              onClick={() => toogleList()}
+            /> :
+            <Image 
+              src={closeMenu} 
+              alt="Cerrar menú" 
+              width={30} 
+              height={30} 
+              className={styles.menu} 
+              onClick={() => toogleList()}
+            />
+          }
         </div>
         <div className={styles['navbar-left']}>
           <Link href="/" className={styles['nav-logo']}>
             <Image src={logo} alt="logo" />
           </Link>
-          <ul>
+          <ul className={state?.listIsOpen ? styles['open-menu'] : styles['close-menu']}>
             <li>
               <Link href='/' onClick={() => changeFilter('All')}>All</Link>
             </li>

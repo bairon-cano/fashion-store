@@ -21,7 +21,7 @@ const MyAccount = () => {
   };
 
   return (
-    <div className={`${styles.MyAccount} ${state.orderIsOpen ? 'changeBg' : ''}`}>
+    <div className={styles.MyAccount}>
       <div className={styles['MyAccount-container']}>
         {message && <span className={styles['message']}>Information Changed</span>}
         <h1 className={styles.title}>My account</h1>
